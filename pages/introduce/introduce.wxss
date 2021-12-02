@@ -1,0 +1,36 @@
+/* pages/introduce/introduce.wxss */
+.introduce {
+  margin: 50rpx;
+  position: relative;
+  height: 218rpx;
+}
+
+.introduce_img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.introduce_content {
+  text-align: center;
+  padding-top: 45rpx;
+}
+
+.line {
+  width: 40rpx;
+  height: 6rpx;
+  background: #EBCF9A;
+  margin: 0 auto;
+}
+
+.introduce_text {
+  font-size: 48rpx;
+  color: #666666;
+  margin: 8rpx 0;
+}
+
+.introduce_text2 {
+  font-size: 24rpx;
+  color: #999999;
+}

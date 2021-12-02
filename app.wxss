@@ -1,0 +1,187 @@
+/**app.wxss**/
+@import "/iconfont/iconfont.wxss";
+
+page {
+  height: 100%;
+  font-family: PingFang SC;
+}
+
+.b_sizing view,
+.b_sizing scroll-view,
+.b_sizing navigator,
+.b_sizing form,
+.b_sizing text,
+.b_sizing button,
+.b_sizing input,
+.b_sizing textarea {
+  box-sizing: border-box;
+}
+
+.mt_8 {
+  margin-top: 8rpx;
+}
+
+.mt_16 {
+  margin-top: 16rpx;
+}
+
+.mt_32 {
+  margin-top: 32rpx;
+}
+
+.mt_40 {
+  margin-top: 40rpx;
+}
+
+.mt_56 {
+  margin-top: 56rpx;
+}
+
+.ml_33 {
+  margin-left: 33rpx;
+}
+
+.mt-24 {
+  margin-top: 24rpx;
+}
+
+.mt-80 {
+  margin-top: 80rpx;
+}
+
+.bg-e {
+  background-color: #eee;
+}
+
+.pr-30,
+.px-30 {
+  padding-right: 30rpx;
+}
+
+.pl-30,
+.px-30 {
+  padding-left: 30rpx;
+}
+
+
+.size18 {
+  font-size: 18rpx;
+}
+
+.size24 {
+  font-size: 24rpx;
+}
+
+.size28 {
+  font-size: 28rpx;
+}
+
+.size30 {
+  font-size: 30rpx;
+}
+
+.size32 {
+  font-size: 32rpx;
+}
+
+.size36 {
+  font-size: 36rpx;
+}
+
+.gray6 {
+  color: #666
+}
+
+.gray9 {
+  color: #999;
+}
+
+
+.heavy {
+  font-weight: 800;
+}
+
+.eli-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* 带背景弧度wrap */
+.wrap-radius {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrap-radius .main {
+  position: relative;
+  width: 100%;
+}
+
+.wrap-radius .main:after {
+  width: 150%;
+  height: 210rpx;
+  position: absolute;
+  left: -25%;
+  top: 0;
+  z-index: -1;
+  content: '';
+  border-radius: 0 0 50% 50%;
+  background: #FBE5BA;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.input-placeholder {
+  color: #BBBBBB;
+}
+
+button::after {
+  border: none
+}
+
+.bb-e {
+  border-bottom: 1px solid #eee;
+}
+
+.pr-4,
+.px-4 {
+  padding-right: 4rpx;
+}
+
+.pl-4,
+.px-4 {
+  padding-left: 4rpx;
+}
+
+.relative {
+  position: relative;
+}
+
+.searches {
+  display: inline-block;
+  line-height: 56rpx;
+  height: 56rpx;
+  background-color: #fff;
+  color: #999;
+  font-size: 24rpx;
+  padding-left: 70rpx;
+  position: relative;
+}

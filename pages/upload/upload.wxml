@@ -1,0 +1,24 @@
+<!--pages/upload/upload.wxml-->
+<view class="upload">
+  <view class="upload_title">添加5G新媒体</view>
+  <view class="upload_content">
+    <view class="upload_text v-center">
+      <view style="margin-bottom: 9rpx;">上传视频</view>
+      <text>*</text>
+    </view>
+    <view class="upload_text2">视频大小不能超过<text>10M</text></view>
+    <view class="upload_img">
+        <image src="../../images/upload_bg.png"></image>
+        <view class="iconfont ant-a-7Iconinterface51videofill upload_icon"></view>
+    </view>
+  </view>
+  <view class="video_tilte">
+    <view class="upload_text v-center">
+      <view style="margin-bottom: 9rpx;">视频标题</view>
+      <text>*</text>
+    </view>
+    <textarea name="" id=""  maxlength="40" placeholder="请添加 40 字以内的标题" placeholder-class="input-placeholder"></textarea>
+  </view>
+
+  <view class="btn">发表</view>
+</view>

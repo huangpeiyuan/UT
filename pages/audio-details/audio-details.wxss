@@ -1,0 +1,58 @@
+/* pages/audio-details/audio-details.wxss */
+.classroom-details {
+  margin: 14rpx 50rpx 100rpx;
+}
+
+.classroom-header {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #000000;
+}
+
+.classroom-word {
+  margin: 16rpx 0 40rpx;
+}
+
+.classroom-text {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.classroom-text2 {
+  font-size: 24rpx;
+  color: #999999;
+  margin-left: 24rpx;
+}
+
+.classroom-video {
+  width: 100%;
+  height: 390rpx;
+}
+
+.classroom-content {
+  justify-content: center;
+  margin: 35rpx 0;
+}
+
+.classroom-content image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.classroom-content view {
+  font-size: 30rpx;
+  color: #000000;
+  margin-left: 12rpx;
+}
+
+.classroom-text3 {
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: #333333;
+  text-indent: 2rem;
+}
+
+.classroom-img{
+  width: 100%;
+  margin-top: 32rpx;
+}

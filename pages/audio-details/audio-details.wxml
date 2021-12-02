@@ -1,0 +1,14 @@
+<!--pages/audio-details/audio-details.wxml-->
+<view class="classroom-details">
+  <view class="classroom-header">《依美燕窝睡眠面膜使用手法》</view>
+  <view class="v-center classroom-word">
+    <view class="classroom-text">发布时间：2018/12/17</view>
+    <view class="classroom-text2">浏览数：2200</view>
+  </view>
+  <view class="v-center classroom-content">
+    <image src="../../images/book.png"></image>
+    <view>课程介绍</view>
+  </view>
+  <view class="classroom-text3">依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法</view>
+  <image src="../../images/banner-1.jpg" class="classroom-img"></image>
+</view>

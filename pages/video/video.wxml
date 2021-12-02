@@ -1,0 +1,33 @@
+<!--pages/video/video.wxml-->
+<view class="video-container">
+  <video id='myvideo' src="../../video/video.mp4" autoplay="true" controls></video>
+  <view class="iconfont ant-a-7Iconarrow1left return" bindtap="return"></view>
+  <text class="video_text">行动力大学私域流量课堂1+1行动力大学私域流量课堂1+1行动力大学私域流量课堂1+1</text>
+  <view class="share_img" bindtap="showShareType">
+    <image src="../../images/share.png"></image>
+  </view>
+
+  <view class="share_box" hidden="{{shareType}}">
+    <view class="share_header v-center">
+      <view class="share_line">-</view>
+      <view class="share_line_title">分享</view>
+      <view class="share_line">-</view>
+    </view>
+    <view class="actionsheet t-center b_sizing" >
+      <view class="flex pt-48 pb-32">
+        <view class="flex1">
+          <button open-type="share" hover-class="none" class="share_content">
+            <image src="../../images/wechat_share.png" style="width: 88rpx;height:88rpx;" />
+            <view class="mt-16 size28" style="color:#333">微信好友</view>
+          </button>
+        </view>
+        <view class="line"></view>
+        <view class="flex1 size0" bindtap="createPoster">
+          <image src="../../images/poster_share.png" style="width: 88rpx;height:88rpx;" />
+          <view class="mt-8 size28" style="color:#333">海报分享</view>
+        </view>
+      </view>
+    </view>
+    <view class="close_btn" bindtap="closeAllLayer">下次再说</view>
+  </view>
+</view>

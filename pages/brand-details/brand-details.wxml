@@ -1,0 +1,4 @@
+<!--pages/brand-details/brand-details.wxml-->
+<view>
+  <image src="../../images/banner-1.jpg"></image>
+</view>

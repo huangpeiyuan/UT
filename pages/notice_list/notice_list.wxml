@@ -1,0 +1,8 @@
+<!--pages/notice_list/notice_list.wxml-->
+<view class="core_box">
+  <view class="core_title">公告通知列表</view>
+  <view class="v-center core_content" wx:for="{{noticeList}}" wx:key="id" bindtap="jump" data-id="{{item.id}}">
+    <view>{{item.title}}</view>
+    <image src="../../images/arrow.png"></image>
+  </view>
+</view>

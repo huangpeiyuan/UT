@@ -1,0 +1,4 @@
+/* pages/brand-details/brand-details.wxss */
+image{
+  margin: 0 50rpx;
+}

@@ -1,0 +1,81 @@
+<!-- pages/all/index.wxml -->
+<view class="b_sizing">
+  <view style="border-bottom: 1rpx solid #ddd;">
+    <view class="search_box">
+      <view class="iconfont ant-a-7Iconinterface16search search_icon"></view>
+      <input class="search search-long" type="text" placeholder="搜索" />
+    </view>
+  </view>
+
+  <view class="mall flex " style="height:calc(100vh - 82rpx);">
+    <view class="tabs" style="height:100%;">
+      <view class="item {{catId == item.id ? 'on':''}}" data-catalogindex="{{index}}" bindtap="changeHandle"
+        wx:for="{{catalog}}" wx:key="id">
+        {{item.name}}
+      </view>
+    </view>
+    <view class="mall-panel ml-24 flex1">
+      <scroll-view scroll-y="true" scroll-with-animation="{{true}}" bindscrolltoupper="upper" bindscrolltolower="lower"
+        scroll-top="{{scrollTop}}" class="lists"
+        style="height:{{catalog[catalogIndex].id === 1 ? 'calc(100% - 12rpx)':'100%'}};" wx:if="{{lists.length > 0}}">
+        <view class="material">
+          <view class="coupon-item" wx:for="{{lists}}" wx:key="index" wx:for-item="item">
+            <view class="material_title">{{item.title}}</view>
+            <view class="material_text">{{item.text}}</view>
+            <view class="material_image v-center" style="flex-wrap: wrap;">
+              <view wx:for="{{item.images}}" wx:key="id" wx:for-item="row"
+                wx:for-index="i">
+                <image src="{{row.src}}"></image>
+              </view>
+            </view>
+            <view class="material_footer v-center">
+              <view class="flex1">{{item.time}}</view>
+              <view class="flex1">{{item.release}}</view>
+              <view class="flex dot_box" data-id="{{item.id}}" bindtap="operation">
+                <view class="dot"></view>
+                <view class="dot"></view>
+              </view>
+            </view>
+            <view class="forward_box v-center" wx:if="{{item.isOperation}}">
+              <button open-type="share" hover-class="none" class="v-center"
+                style="background: #666666;padding:0;font-size:24rpx;font-weight: normal;margin:0;">
+                <image src="../../images/forward.png" style="width:27rpx;height:27rpx;margin-right:4rpx;"></image>
+                <view style="color:#fff;">转发</view>
+              </button>
+              <view class="line"></view>
+              <view class="v-center forward">
+                <view class="v-center" wx:if="{{item.isCollection}}" data-id="{{item.id}}" bindtap="switchCollection">
+                  <image src="../../images/collection_icon.png"></image>
+                  <view>收藏</view>
+                </view>
+                <view class="v-center" wx:else data-id="{{item.id}}" bindtap="switchCollection">
+                  <image src="../../images/cancel_collection.png"></image>
+                  <view>取消</view>
+                </view>
+              </view>
+              <view class="line"></view>
+              <view class="v-center forward" data-id="{{item.id}}"  data-index="{{index}}" bindtap="downLoad">
+                <image src="../../images/download.png"></image>
+                <view>下载</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="pb-24">
+          <view class="t-center grayb size24" wx:if="{{all}}">到底啦~~</view>
+        </view>
+      </scroll-view>
+      <view class="t-center grayb size24 mt-30" wx:if="{{lists.length === 0 && all}}">
+        当前分类暂无产品~~
+      </view>
+    </view>
+  </view>
+  <!-- 弹框 -->
+  <view class="tips" wx:if="{{isTips}}">
+    <view class="tips_tltie">提示</view>
+    <view class="tips_text">文案已复制至剪贴板，图片已保存至相册</view>
+    <view class="line2"></view>
+    <view class="tisp_btn" bindtap="closeTips">确定</view>
+  </view>
+  <view class="model" wx:if="{{isTips}}"></view>
+</view>

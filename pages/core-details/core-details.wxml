@@ -1,0 +1,10 @@
+<!--pages/core-details/core-details.wxml-->
+<view class="core_details">
+  <view class="core_details_header">
+    <view class="core_details_title">报告名称报告名称报告名称报告名称报告名称报告名称报告名称报告名称</view>
+    <view class="core_details_time">2021-11-23</view>
+  </view>
+  <view class="core_details_img">
+    <image src="../../images/banner-1.jpg"></image>
+  </view>
+</view>

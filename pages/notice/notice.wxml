@@ -1,0 +1,12 @@
+<!--pages/notice/notice.wxml-->
+<view>
+  <view class="block"></view>
+  <view class="notice">
+    <view class="notice_content">
+      <view class="notice_text">{{noticeDetails.title}}</view>
+      <view class="line"></view>
+      <view class="notice_text2">{{noticeDetails.content}}</view>
+      <view class="notice_time">{{noticeDetails.created_at}}</view>
+    </view>
+  </view>
+</view>

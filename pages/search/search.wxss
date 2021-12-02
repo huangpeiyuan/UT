@@ -1,0 +1,56 @@
+.search_box {
+  position: relative;
+  margin: 24rpx 0 26rpx;
+  padding: 0 26rpx 20rpx;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.search {
+  height: 56rpx;
+  background: #F6F5F5;
+  border-radius: 28rpx;
+  padding-left: 80rpx;
+  font-size: 30rpx;
+  margin-right: 32rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 12rpx;
+  left: 60rpx;
+  color: #BBBBBB;
+}
+
+.cancel {
+  font-size: 24rpx;
+  color: #EBCF9A;
+}
+
+.search_history {
+  padding: 0 20rpx;
+}
+
+.history_title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+
+.history_container {
+  flex-wrap: wrap;
+}
+
+.history_content {
+  font-size: 24rpx;
+  color: #BBBBBB;
+  margin-right: 15rpx;
+  margin-top: 20rpx;
+}
+
+.empty_history {
+  text-align: center;
+  font-size: 24rpx;
+  color: #EBCF9A;
+  margin-top: 52rpx;
+}

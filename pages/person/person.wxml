@@ -1,0 +1,57 @@
+<!--pages/person/person.wxml-->
+<view>
+	<!-- 登录 -->
+	<navigator url="../login/login" class="preson_info">
+		<view class="preson_bg">
+			<image src="../../images/person.png"></image>
+		</view>
+		<view class="avatar v-center">
+			<view class="v-center" lang="zh_CN">
+				<image src="../../images/login.png"></image>
+				<view>点击登录</view>
+			</view>
+			<!-- <view class="preson_id">ID：<text>2233442233</text></view> -->
+		</view>
+	</navigator>
+	<view class="content">
+		<!-- 通告 -->
+		<view class="announcement v-center" data-id="{{notice.id}}" bindtap="jumpNotice">
+			<view class="iconfont ant-sound-fill"></view>
+			<view class="announcement_text">{{notice.title}}</view>
+			<view class="right_arrow">
+				<image src="../../images/right_arrow.png"></image>
+			</view>
+		</view>
+
+		<view class="person_banner">
+			<image src="../../images/banner-1.jpg"></image>
+		</view>
+
+		<view class="service">
+			<view class="service_title">服务中心</view>
+			<view class="collection">
+				<view class="v-center mt_32">
+					<image src="../../images/collection.png" class="collection_img"></image>
+					<view class="collection_text">我的收藏</view>
+					<view class="iconfont ant-a-7Iconarrow2right collection_i flex1"></view>
+				</view>
+				<view class="v-center mt_32">
+					<image src="../../images/service.png" class="collection_img"></image>
+					<view class="collection_text">在线客服</view>
+					<view class="iconfont ant-a-7Iconarrow2right collection_i flex1"></view>
+				</view>
+				<view class="v-center mt_32">
+					<image src="../../images/core.png" class="collection_img"></image>
+					<view class="collection_text">下单中心</view>
+					<view class="iconfont ant-a-7Iconarrow2right collection_i flex1"></view>
+				</view>
+				<navigator url="../notice_list/notice_list" class="v-center mt_32">
+					<image src="../../images/notice.png" class="collection_img"></image>
+					<view class="collection_text">公告通知</view>
+					<view class="iconfont ant-a-7Iconarrow2right collection_i flex1"></view>
+				</navigator>
+			</view>
+		</view>
+	</view>
+
+</view>

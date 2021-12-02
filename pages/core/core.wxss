@@ -1,0 +1,31 @@
+/* pages/core/core.wxss */
+.core_box {
+  padding: 30rpx;
+}
+
+.core_title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #EBCF9A;
+  margin-top: 16rpx;
+  padding-bottom: 30rpx;
+}
+
+.core_content {
+  font-size: 28rpx;
+  color: #333333;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #DDDDDD;
+  margin-top: 30rpx;
+}
+
+.core_content view{
+  width: 560rpx;
+}
+
+.core_content image{
+  width: 14rpx;
+  height: 28rpx;
+}

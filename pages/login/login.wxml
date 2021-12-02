@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<!-- pages/login/index.wxml -->
+<view class="b_sizing">
+  <view class="mt-80 px-30 t-center">
+    <image src="../../images/logo.png" style="width:240rpx;height:240rpx;" />
+    <view class="mt-24 size36">UT素材</view>
+    <view class="mt-80 size28">为了给您提供完整功能需要获取以下权限</view>
+    <view class="mt-24 size24 gray6">·获得您的公开信息（昵称、头像等）</view>
+    <!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo" class="mt-80 btn primary long" wx:if="{{isNew && !hasAuth}}">
+      同意授权
+    </button> -->
+    <button class="mt-80 btn primary long" lang="zh_CN" bindtap="getUserProfile" wx:if="{{isNew && !hasUserInfo}}">
+      同意授权
+    </button>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getphonenumber" class="mt-80 btn primary long"
+      disabled="{{isLoading}}" wx:else>
+      同意授权手机号
+    </button>
+  </view>
+</view>

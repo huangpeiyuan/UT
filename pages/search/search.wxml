@@ -1,0 +1,27 @@
+<view>
+  <view class="search_box v-center">
+    <view class="flex1">
+      <view class="iconfont ant-a-7Iconinterface16search search_icon"></view>
+      <input class="search search-long" type="text" placeholder="搜索" />
+    </view>
+    <view class="cancel">取消</view>
+  </view>
+  <view class="search_history">
+    <view class="history_title">搜索历史</view>
+    <view class="v-center history_container">
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+      <view class="history_content">搜索历史词汇A</view>
+    </view>
+    <view class="empty_history" bindtap="emptyHistory">清空历史记录</view>
+  </view>
+</view>

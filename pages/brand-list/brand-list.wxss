@@ -1,0 +1,68 @@
+/* pages/brand-list/brand-list.wxss */
+/* pages/brand/index.wxss */
+page {
+  color: #666
+}
+
+.tabs {
+  margin-top: 40rpx;
+  white-space: nowrap;
+  line-height: 56rpx;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+  font-size: 34rpx;
+}
+
+.tabs .item {
+  display: inline-block;
+  margin-right: 68rpx;
+  padding-bottom: 16rpx;
+}
+
+.tabs .item:first-child {
+  margin-left: 27rpx;
+}
+
+.tabs .item:last-child {
+  margin-right: 37rpx;
+}
+
+.tabs .item.on {
+  font-weight: 800;
+  color: #333;
+  font-size: 40rpx;
+  position: relative;
+}
+
+.tabs .item.on:after {
+  content: '';
+  display: inline-block;
+  width: 48rpx;
+  height: 8rpx;
+  background-color: #EBCF9A;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+button:not([size='mini']).b_share {
+  position: fixed;
+  right: 6rpx;
+  bottom: 116rpx;
+  width: 136rpx;
+  height: 136rpx;
+  background: transparent;
+  padding: 0;
+  font-size: 0;
+}
+
+.line {
+  width: 40rpx;
+  height: 6rpx;
+  background: #EBCF9A;
+  margin: 0 auto;
+}

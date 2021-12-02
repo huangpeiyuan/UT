@@ -1,0 +1,28 @@
+<!--pages/media/media.wxml-->
+<view class='case-page'>
+  <view class="search">
+    <view class="iconfont ant-a-7Iconinterface16search search_icon"></view>
+    <input type="text" placeholder="搜索" placeholder-class="input-placeholder"/>
+  </view>
+  <view class='list-masonry'>
+    <view class='item-masonry' wx:for="{{mediaList}}" wx:key="id" bindtap="">
+      <image src='{{item.url}}'></image>
+      <view class="media_footer">
+        <text class="media_tltle">{{item.title}}</text>
+        <view class="v-center media_information">
+          <image src="{{item.user.avatarUrl}}"></image>
+          <text>{{item.user.nickName}}</text>
+        </view>
+      </view>
+      <!-- 数量 -->
+      <view class="number v-center">
+        <image src="../../images/eyes.png"></image>
+        <text>{{item.paly_num}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 上传 -->
+  <navigator url="../upload/upload" class="add">
+    <image src="../../images/add.png"></image>
+  </navigator>
+</view>

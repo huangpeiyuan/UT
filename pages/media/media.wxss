@@ -1,0 +1,115 @@
+page {
+  background-color: #EFEFF4;
+}
+
+.case-page {
+  padding: 40rpx 20rpx;
+}
+
+.search {
+  height: 56rpx;
+  background: #FFFFFF;
+  border-radius: 28rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.search input {
+  font-size: 30rpx;
+  padding-left: 72rpx;
+  padding-top: 5rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  font-size: 30rpx;
+  color: #BBBBBB;
+}
+
+
+.list-masonry {
+  column-count: 2;
+  column-gap: 20rpx;
+}
+
+.list-masonry :first-child {
+  margin: 0;
+}
+
+.item-masonry {
+  background-color: #fff;
+  break-inside: avoid;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  position: relative;
+  border-radius: 8rpx 8rpx 0px 0px;
+}
+
+.item-masonry image {
+  width: 100%;
+  border-radius: 8rpx 8rpx 0px 0px;
+}
+
+.media_footer {
+  margin: 0 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.media_tltle {
+  font-size: 26rpx;
+  color: #333333;
+  padding-bottom: 20rpx;
+  display: inline-block;
+  line-height: 50rpx;
+}
+
+.media_information image {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.media_information text {
+  font-size: 24rpx;
+  color: #888888;
+  margin-left: 8rpx;
+}
+
+.number {
+  width: 106rpx;
+  height: 35rpx;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 18rpx;
+  /* justify-content: center; */
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+}
+
+.number image {
+  width: 24rpx;
+  height: 24rpx;
+  padding-bottom: 2rpx;
+  padding-left: 10rpx;
+}
+
+.number text {
+  font-size: 20rpx;
+  color: #FFFFFF;
+  margin-left: 8rpx;
+  line-height: 35rpx;
+}
+
+.add{
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  right: 13rpx;
+  bottom: 90rpx;
+}
+
+.add image{
+  width: 100%;
+  height: 100%;
+}

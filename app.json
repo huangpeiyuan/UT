@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/source-material/source-material",
+    "pages/university/university",
+    "pages/media/media",
+    "pages/person/person",
+    "pages/notice/notice",
+    "pages/introduce/introduce",
+    "pages/brand-list/brand-list",
+    "pages/brand-details/brand-details",
+    "pages/classroom-details/classroom-details",
+    "pages/audio-details/audio-details",
+    "pages/test/test",
+    "pages/upload/upload",
+    "pages/video/video",
+    "pages/extension/extension",
+    "pages/collection/collection",
+    "pages/core/core",
+    "pages/core-details/core-details",
+    "pages/search/search",
+    "pages/login/login",
+    "pages/notice_list/notice_list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "UT素材",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#EBCF9A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab-icon-1.png",
+        "selectedIconPath": "images/tab-icon-1-active.png"
+      },
+      {
+        "pagePath": "pages/source-material/source-material",
+        "text": "发圈素材",
+        "iconPath": "images/tab-icon-2.png",
+        "selectedIconPath": "images/tab-icon-2-active.png"
+      },
+      {
+        "pagePath": "pages/university/university",
+        "text": "行动力大学",
+        "iconPath": "images/tab-icon-3.png",
+        "selectedIconPath": "images/tab-icon-3-active.png"
+      },
+      {
+        "pagePath": "pages/media/media",
+        "text": "5G新媒体",
+        "iconPath": "images/tab-icon-4.png",
+        "selectedIconPath": "images/tab-icon-4-active.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "images/tab-icon-5.png",
+        "selectedIconPath": "images/tab-icon-5-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

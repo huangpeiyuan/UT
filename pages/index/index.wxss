@@ -1,0 +1,78 @@
+/**index.wxss**/
+.swiper {
+  margin: 0 20rpx 32rpx;
+  padding-top: 16rpx;
+  border-radius: 16rpx;
+}
+
+.banners {
+  height: 355rpx;
+  border-radius: 16rpx;
+}
+
+.banners swiper-item {
+  border-radius: 16rpx;
+}
+
+.index-nav image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.index-nav_text {
+  font-size: 28rpx;
+  color: #000000;
+  margin-top: 10rpx;
+}
+
+.classroom {
+  margin: 50rpx 20rpx;
+}
+
+.classroom_title {
+  font-size: 30rpx;
+  color: #000000;
+}
+
+.classroom_title text {
+  font-size: 20rpx;
+  color: #BBBBBB;
+  margin-left: 16rpx;
+}
+
+.classroom_header {
+  height: 263rpx;
+}
+
+.classroom_header image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+}
+
+.classroom_content {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.classroom_img {
+  width: 343rpx;
+  margin-top: 24rpx;
+}
+
+.classroom_img image {
+  width: 100%;
+  height: 229rpx;
+  border-radius: 8rpx;
+}
+
+.classroom_text2 {
+  font-size: 28rpx;
+  color: #333333;
+  margin: 20rpx 0 4rpx;
+}
+
+.classroom_text3 {
+  font-size: 24rpx;
+  color: #BBBBBB;
+}

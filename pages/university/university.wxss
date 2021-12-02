@@ -1,0 +1,85 @@
+/* pages/university/university.wxss */
+.classroom {
+  position: relative;
+}
+
+.classroom_box {
+  width: 600rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 20rpx rgba(0, 0, 0, 0.08);
+  border-radius: 10rpx;
+  padding: 24rpx 0;
+  position: absolute;
+  bottom: -5%;
+  left: 7%;
+}
+
+.classroom_tilte {
+  font-size: 30prx;
+  color: #999999;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.line {
+  width: 2rpx;
+  height: 30rpx;
+  background: #EEEEEE;
+}
+
+.on {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #000000;
+}
+
+.on:after {
+  content: '';
+  display: inline-block;
+  width: 60rpx;
+  height: 5rpx;
+  background-color: #EBCF9A;
+  position: absolute;
+  bottom: -26rpx;
+  left: 45%;
+  transform: translateX(-50%);
+}
+
+.classroom_content{
+  margin: 46rpx 0 0 33rpx;
+}
+
+.classroom_img {
+  width: 180rpx;
+  height: 120rpx;
+ 
+}
+
+.classroom_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+
+.classroom_text {
+  font-size: 30rpx;
+  color: #000000;
+}
+
+.classroom_word{
+  margin-left: 24rpx;
+}
+
+.classroom_text2 {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 8rpx;
+}
+
+.classroom_text2 image{
+  width: 28rpx;
+  height: 28rpx;
+}
+

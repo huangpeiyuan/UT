@@ -1,0 +1,30 @@
+/* pages/core-details/core-details.wxss */
+page {
+  background-color: #F5F6F7;
+}
+
+.core_details {
+  background-color: #fff;
+  margin-top: 20rpx;
+  height: 100%;
+}
+
+.core_details_header {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #dddddd;
+}
+
+.core_details_title {
+  font-size: 36rpx;
+  color: #333333;
+}
+
+.core_details_time {
+  font-size: 24rpx;
+  color: #BBBBBB;
+  margin-top: 24rpx;
+}
+
+.core_details_img{
+  margin: 20rpx 30rpx;
+}

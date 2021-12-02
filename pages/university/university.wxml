@@ -1,0 +1,93 @@
+<!--pages/university/university.wxml-->
+<view>
+  <view class="classroom">
+    <image src="../../images/banner-1.jpg" style="width:100%;height:450rpx;"></image>
+    <view class="v-center classroom_box">
+      <view class="classroom_tilte {{type === 0 ? 'on':''}}" data-type="0" bindtap="changeHandle">视频课堂</view>
+      <view class="line"></view>
+      <view class="classroom_tilte {{type === 1 ? 'on':''}}" data-type="1" bindtap="changeHandle">语音课堂</view>
+    </view>
+  </view>
+  <view>
+    <view class="classroom_content v-center">
+      <view class="classroom_img">
+        <image src="../../images/banner-1.jpg"></image>
+      </view>
+      <view class="classroom_word">
+        <view class="classroom_text">视频课堂名称视频课堂名称</view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/time_icon.png"></image>
+          <view>2021-03-01</view>
+        </view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/person_icon.png"></image>
+          <view style="color:#EBCF9A">369</view>
+        </view>
+      </view>
+    </view>
+    <view class="classroom_content v-center">
+      <view class="classroom_img">
+        <image src="../../images/banner-1.jpg"></image>
+      </view>
+      <view class="classroom_word">
+        <view class="classroom_text">视频课堂名称视频课堂名称</view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/time_icon.png"></image>
+          <view>2021-03-01</view>
+        </view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/person_icon.png"></image>
+          <view style="color:#EBCF9A">369</view>
+        </view>
+      </view>
+    </view>
+    <view class="classroom_content v-center">
+      <view class="classroom_img">
+        <image src="../../images/banner-1.jpg"></image>
+      </view>
+      <view class="classroom_word">
+        <view class="classroom_text">视频课堂名称视频课堂名称</view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/time_icon.png"></image>
+          <view>2021-03-01</view>
+        </view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/person_icon.png"></image>
+          <view style="color:#EBCF9A">369</view>
+        </view>
+      </view>
+    </view>
+    <view class="classroom_content v-center">
+      <view class="classroom_img">
+        <image src="../../images/banner-1.jpg"></image>
+      </view>
+      <view class="classroom_word">
+        <view class="classroom_text">视频课堂名称视频课堂名称</view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/time_icon.png"></image>
+          <view>2021-03-01</view>
+        </view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/person_icon.png"></image>
+          <view style="color:#EBCF9A">369</view>
+        </view>
+      </view>
+    </view>
+    <view class="classroom_content v-center">
+      <view class="classroom_img">
+        <image src="../../images/banner-1.jpg"></image>
+      </view>
+      <view class="classroom_word">
+        <view class="classroom_text">视频课堂名称视频课堂名称</view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/time_icon.png"></image>
+          <view>2021-03-01</view>
+        </view>
+        <view class="classroom_text2 v-center">
+          <image src="../../images/person_icon.png"></image>
+          <view style="color:#EBCF9A">369</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
