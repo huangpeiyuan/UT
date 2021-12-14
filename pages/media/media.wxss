@@ -101,7 +101,7 @@ page {
   line-height: 35rpx;
 }
 
-.add{
+.add {
   width: 80rpx;
   height: 80rpx;
   position: fixed;
@@ -109,7 +109,22 @@ page {
   bottom: 90rpx;
 }
 
-.add image{
+.add image {
   width: 100%;
   height: 100%;
+}
+
+.search_no {
+  font-size: 30rpx;
+  color: #BBBBBB;
+  position: fixed;
+  top: 50%;
+  left: 35%;
+}
+
+.close_icon {
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  z-index: 22;
 }

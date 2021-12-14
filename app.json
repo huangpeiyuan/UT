@@ -11,17 +11,15 @@
     "pages/brand-list/brand-list",
     "pages/brand-details/brand-details",
     "pages/classroom-details/classroom-details",
-    "pages/audio-details/audio-details",
-    "pages/test/test",
-    "pages/upload/upload",
-    "pages/video/video",
     "pages/extension/extension",
     "pages/collection/collection",
     "pages/core/core",
     "pages/core-details/core-details",
     "pages/search/search",
     "pages/login/login",
-    "pages/notice_list/notice_list"
+    "pages/notice_list/notice_list",
+    "pages/video/video",
+    "pages/out/out"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -70,5 +68,11 @@
   "lazyCodeLoading": "requiredComponents",
   "requiredBackgroundModes": [
     "audio"
-  ]
+  ],
+  "plugins": {
+    "QyVideo": {
+      "version": "1.0.5",
+      "provider": "wxd58313e4365655c8"
+    }
+  }
 }

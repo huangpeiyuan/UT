@@ -1,43 +1,11 @@
 <!--pages/introduce/introduce.wxml-->
 <view>
-  <navigator class="introduce">
+  <view class="introduce" wx:for="{{catList}}" wx:key="id" data-id="{{item.id}}" bindtap="jump">
     <image src="../../images/introduce.png" class="introduce_img"></image>
     <view class="introduce_content">
       <view class="line"></view>
-      <view class="introduce_text">品牌新闻</view>
-      <view class="introduce_text2">Brand News</view>
+      <view class="introduce_text">{{item.name}}</view>
+      <view class="introduce_text2">{{item.describe}}</view>
     </view>
-  </navigator>
-  <navigator class="introduce">
-    <image src="../../images/introduce.png" class="introduce_img"></image>
-    <view class="introduce_content">
-      <view class="line"></view>
-      <view class="introduce_text">UT</view>
-      <view class="introduce_text2">UT</view>
-    </view>
-  </navigator>
-  <navigator class="introduce">
-    <image src="../../images/introduce.png" class="introduce_img"></image>
-    <view class="introduce_content">
-      <view class="line"></view>
-      <view class="introduce_text">集团实力</view>
-      <view class="introduce_text2">Group Strength</view>
-    </view>
-  </navigator>
-  <navigator class="introduce">
-    <image src="../../images/introduce.png" class="introduce_img"></image>
-    <view class="introduce_content">
-      <view class="line"></view>
-      <view class="introduce_text">UT</view>
-      <view class="introduce_text2">UT</view>
-    </view>
-  </navigator>
-  <navigator class="introduce">
-    <image src="../../images/introduce.png" class="introduce_img"></image>
-    <view class="introduce_content">
-      <view class="line"></view>
-      <view class="introduce_text">UT</view>
-      <view class="introduce_text2">UT</view>
-    </view>
-  </navigator>
+  </view>
 </view>

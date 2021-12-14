@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText":"视频课堂"
+  "usingComponents": {
+    "qy-video": "plugin://QyVideo/qy-video"
+  },
+  "navigationBarTitleText":"课堂"
 }

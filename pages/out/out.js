@@ -1,24 +1,18 @@
-// pages/core-details/core-details.js
-const api = require('../../utils/api.js')
-const util = require('../../utils/util.js')
+// pages/out/out.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    testingId: "",
-    testingList: "",
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      testingId: options.id
-    })
-    this.getTesting();
+
   },
 
   /**
@@ -33,21 +27,6 @@ Page({
    */
   onShow: function () {
 
-  },
-
-  getTesting() {
-    api.testingDetails({
-      data: {
-        testingId: this.data.testingId
-      }
-    }).then(res => {
-      this.setData({
-        testingList: res.data.testingData
-      })
-      console.log(this.data.testingList);
-    }).catch(err => {
-      util.hideLoading()
-    })
   },
 
   /**

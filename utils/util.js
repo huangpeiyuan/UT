@@ -51,7 +51,7 @@ const hideLoading = (all, fn) => {
   }
 }
 
-// 保存图片到相册
+// 点击保存图片到相册
 function saveImageToPhotosAlbum(imagePath) {
   wx.saveImageToPhotosAlbum({
     filePath: imagePath, // 图片路径
@@ -60,6 +60,58 @@ function saveImageToPhotosAlbum(imagePath) {
         title: '保存成功',
       })
       wx.getSavedFileList({
+        success(res) {
+          let len = res.fileList.length
+          if (res.fileList.length > 0) {
+            for (let i = 0; i < len; i++) {
+              wx.removeSavedFile({
+                filePath: res.fileList[i].filePath,
+                complete(res) {
+                }
+              })
+            }
+
+          }
+        }
+      })
+    },
+    fail: function (err) {
+      wx.getSetting({
+        success: function (res) {
+          // 判断否有保存权限
+          if (!res.authSetting['scope.writePhotosAlbum']) {
+            wx.showModal({
+              title: '提示',
+              content: '需要获取相册权限哦',
+              success: function (res) {
+                if (res.confirm) {
+                  wx.openSetting({
+                    success(res) {
+                      console.log(res);
+                    },
+                    fail(res) {
+                      console.log(res);
+                    }
+                  });
+                }
+              }
+            })
+          };
+        }
+      });
+    }
+  })
+}
+
+// 长按保存图片到相册
+function pressImageToPhotosAlbum(imagePath) {
+  wx.saveImageToPhotosAlbum({
+    filePath: imagePath, // 图片路径
+    success: function (res) {
+      wx.showToast({
+        title: '保存成功',
+      })
+      wx.downloadFile({
         success(res) {
           let len = res.fileList.length
           if (res.fileList.length > 0) {
@@ -244,5 +296,6 @@ module.exports = {
   countdown,
   saveImageToPhotosAlbum,
   debounce,
-  getQueryVariable
+  getQueryVariable,
+  pressImageToPhotosAlbum,
 }

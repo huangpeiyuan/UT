@@ -1,4 +1,6 @@
 <!--pages/brand-details/brand-details.wxml-->
 <view>
-  <image src="../../images/banner-1.jpg"></image>
+  <view class="brand_img">
+    <image src="{{brandList.details_image}}"></image>
+  </view>
 </view>

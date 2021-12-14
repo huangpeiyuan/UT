@@ -4,97 +4,88 @@ export default class LastMayday {
   }
   palette() {
     return ({
-      width: '640rpx',
-      height: '868rpx',
-      background: '#fff',
-      borderRadius: '32rpx',
+      width: '800rpx',
+      height: '1500rpx',
       views: [
         {
           type: 'image',
-          url: '../../images/poster-bg.jpg',
+          url: '../../images/extension.png',
           css: {
             top: 0,
             left: 0,
-            width: '640rpx',
-            height: '868rpx',
-          }
-        },
-        {
-          type: 'text',
-          text: '壹燕心选',
-          css: {
-            top: '36rpx',
-            left: '0',
-            width: '640rpx',
-            height: '50rpx',
-            color: '#fff',
-            fontSize: '36rpx',
-            lineHeight: '50rpx',
-            textAlign: 'center'
-          }
-        },
-        {
-          type: 'rect',
-          css: {
-            top: '112rpx',
-            left: '36rpx',
-            width: '560rpx',
-            height: '710rpx',
-            color: '#fff',
-            borderRadius: '16rpx'
+            width: '800rpx',
+            height: '1500rpx',
           }
         },
         {
           type: 'image',
-          url: this.message.avatar_url || '../../images/avatar.png',
+          url: '../../images/extension_footer.png',
           css: {
-            top: '172rpx',
-            left: '240rpx',
+            bottom: '250rpx',
+            left: '50rpx',
+            width: '710rpx',
+            height: '200rpx',
+          }
+        },
+        {
+          type: 'image',
+          url: this.message.avatarUrl || '',
+          css: {
+            bottom: '320rpx',
+            left: '100rpx',
             borderRadius: '50%',
-            width: '160rpx',
-            height: '160rpx'
+            border: '1rpx solid #722ED1',
+            width: '86rpx',
+            height: '86rpx'
+          }
+        },
+        {
+          type: 'image',
+          url: '../../images/ewm.jpg',
+          css: {
+            top: '610rpx',
+            left: '258rpx',
+            width: '306rpx',
+            height: '306rpx'
           }
         },
         {
           type: 'text',
-          text: (this.message.name || this.message.nick_name) + '为您推荐',
+          text: "用户昵称：",
           css: {
-            top: '362rpx',
-            left: '0',
-            width: '640rpx',
-            height: '50rpx',
-            color: '#333',
-            fontSize: '36rpx',
-            lineHeight: '50rpx',
-            lineHeight: '40rpx',
-            textAlign: 'center',
-          }
-        },
-        {
-          type: 'text',
-          text: '扫码了解更多',
-          css: {
-            right: '0rpx',
-            bottom: '72rpx',
-            width: '640rpx',
-            height: '30rpx',
-            fontSize: '28rpx',
-            color: '#999',
-            lineHeight: '40rpx',
+            right: '455rpx',
+            bottom: '390rpx',
+            color: '#AFAFAF',
+            fontSize: '24rpx',
             maxLines: 1,
             textAlign: 'center'
           }
         },
         {
-          type: 'image',
-          url: this.message.qrcode,
+          type: 'text',
+          text: this.message.nickName,
           css: {
-            bottom: '128rpx',
-            right: '180rpx',
-            width: '280rpx',
-            height: '280rpx'
+            right: '485rpx',
+            bottom: '340rpx',
+            color: '#fff',
+            fontSize: '30rpx',
+            maxLines: 1,
+            textAlign: 'center'
           }
-        }
+        },
+        {
+          type: 'text',
+          text: '邀请您扫码了解更多!',
+          css: {
+            right: '350rpx',
+            bottom: '280rpx',
+            fontSize: '24rpx',
+            color: '#FFE013',
+            lineHeight: '40rpx',
+            maxLines: 1,
+            textAlign: 'center'
+          }
+        },
       ],
     });
   }

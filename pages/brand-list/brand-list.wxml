@@ -1,55 +1,21 @@
 <!-- pages/brand/index.wxml -->
-<!-- <wxs src="../../wxs/comm.wxs" module="tools"></wxs> -->
 <view class="b_sizing mt_32">
   <view class="line"></view>
-  <view class="mt_8 t-center size32">Brand News</view>
-  <view class="mt_8 size30 t-center">品牌新闻</view>
+  <view class="mt_8 t-center size32">{{catList.describe}}</view>
+  <view class="mt_8 size30 t-center">{{catList.name}}</view>
   <scroll-view class="tabs" scroll-x="true"  style="width: 100%;">
-    <view class="item on">2021</view>
-    <view class="item">2020</view>
-    <view class="item">2019</view>
+    <view class="item {{catListId === item.id ? 'on' : ''}}" wx:for="{{catMiniList}}" wx:key="id" data-id="{{item.id}}" bindtap="changeYear">{{item.name}}</view>
   </scroll-view>
   <view class="lists px-30">
-    <navigator url="" hover-class="none" class="item mt_56">
-      <view class="gray9 size32">2021-11</view>
+    <view class="item mt_56" wx:for="{{brandList}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetails">
       <view class="flex">
         <view class="flex1">
-          <view class="mt_8 eli-2 size30 heavy">创始人Kevin对话Jony探讨未来发展计划</view>
-          <view class="mt_8 size18 eli-2">Founder Kevin talks to Jony about his plans for the future</view>
+          <view class="mt_8 eli-2 size30 heavy">{{item.title}}</view>
+          <view class="mt_8 size18 eli-2">{{item.describe}}</view>
         </view>
-        <image src="../../images/banner-1.jpg"  class="ml-33" style="width:240rpx;height:135rpx;" />
+        <image src="{{item.image}}"  class="ml-33" style="width:240rpx;height:135rpx;" />
       </view>
-    </navigator>
-    <navigator url="" hover-class="none" class="item mt_56">
-      <view class="gray9 size32">2021-11</view>
-      <view class="flex">
-        <view class="flex1">
-          <view class="mt_8 eli-2 size30 heavy">创始人Kevin对话Jony探讨未来发展计划</view>
-          <view class="mt_8 size18 eli-2">Founder Kevin talks to Jony about his plans for the future</view>
-        </view>
-        <image src="../../images/banner-1.jpg"  class="ml-33" style="width:240rpx;height:135rpx;" />
-      </view>
-    </navigator>
-    <navigator url="" hover-class="none" class="item mt_56">
-      <view class="gray9 size32">2021-11</view>
-      <view class="flex">
-        <view class="flex1">
-          <view class="mt_8 eli-2 size30 heavy">创始人Kevin对话Jony探讨未来发展计划</view>
-          <view class="mt_8 size18 eli-2">Founder Kevin talks to Jony about his plans for the future</view>
-        </view>
-        <image src="../../images/banner-1.jpg"  class="ml-33" style="width:240rpx;height:135rpx;" />
-      </view>
-    </navigator>
-    <navigator url="" hover-class="none" class="item mt_56">
-      <view class="gray9 size32">2021-11</view>
-      <view class="flex">
-        <view class="flex1">
-          <view class="mt_8 eli-2 size30 heavy">创始人Kevin对话Jony探讨未来发展计划</view>
-          <view class="mt_8 size18 eli-2">Founder Kevin talks to Jony about his plans for the future</view>
-        </view>
-        <image src="../../images/banner-1.jpg"  class="ml-33" style="width:240rpx;height:135rpx;" />
-      </view>
-    </navigator>
+    </view>
   </view>
   <!-- <view class="center gray9 size24" style="height:200rpx;">
     没有相关介绍哦~~

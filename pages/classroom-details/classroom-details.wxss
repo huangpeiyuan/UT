@@ -24,7 +24,7 @@
   margin-left: 24rpx;
 }
 
-.classroom-video {
+.classroom-video video{
   width: 100%;
   height: 390rpx;
 }
@@ -52,7 +52,46 @@
   text-indent: 2rem;
 }
 
-.classroom-img{
+.classroom-img {
   width: 100%;
   margin-top: 32rpx;
+}
+
+/* 音频 */
+
+.audio_box {
+  width: 650rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 12rpx 32rpx rgba(0, 0, 0, 0.1);
+  border-radius: 40rpx;
+}
+
+.progress {
+  position: relative;
+  padding-top: 51rpx;
+}
+
+.start_time {
+  position: absolute;
+  top: 110rpx;
+  left: 34rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.end_time {
+  position: absolute;
+  top: 110rpx;
+  right: 34rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons image {
+  width: 140rpx;
+  height: 140rpx;
 }

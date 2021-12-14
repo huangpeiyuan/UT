@@ -1,5 +1,5 @@
 const util = require('./util.js')
-const url = 'http://ut.315mao.com'
+const url = 'https://ut.315mao.com'
 
 let app
 
@@ -60,7 +60,7 @@ let service = config => {
             }
             util.hideLoading(true)
             wx.redirectTo({
-              url: '/pages/login/index'
+              url: '/pages/login/login'
             })
 
             break;
@@ -127,10 +127,10 @@ const saveUser = config => { // 保存用户微信信息,获取userId
   })
 }
 
-const getUserInfo = config => { // 保存用户微信信息,获取userId
+const getUserInfo = config => { // 获取用户信息数据接口
   return service({
     url: '/Api/Login/getUserInfo',
-    method: 'POST',
+    method: 'GET',
     ...config
   })
 }
@@ -167,6 +167,135 @@ const getMedia = config => { // 5G新传媒数据接口
   })
 }
 
+const MediaDetails = config => { // 5G新传媒详情数据接口
+  return service({
+    url: '/Api/Media/details',
+    method: 'GET',
+    ...config
+  })
+}
+
+const catData = config => { // 品牌介绍分类数据接口
+  return service({
+    url: '/Api/Brand/catData',
+    method: 'GET',
+    ...config
+  })
+}
+
+const catMiniData = config => { // 品牌介绍子分类数据
+  return service({
+    url: '/Api/Brand/catMiniData',
+    method: 'GET',
+    ...config
+  })
+}
+
+const getBrand = config => { // 品牌介绍数据接口
+  return service({
+    url: '/Api/Brand/index',
+    method: 'GET',
+    ...config
+  })
+}
+
+const BrandDetails = config => { // 品牌介绍详情数据接口
+  return service({
+    url: '/Api/Brand/details',
+    method: 'GET',
+    ...config
+  })
+}
+
+const Curriculum = config => { // 行动力大学数据接口
+  return service({
+    url: '/Api/Curriculum/index',
+    method: 'GET',
+    ...config
+  })
+}
+
+const CurriculumDetails = config => { // 行动力大学数据详情
+  return service({
+    url: '/Api/Curriculum/details',
+    method: 'GET',
+    ...config
+  })
+}
+
+const getBannerData = config => { // banner图数据接口
+  return service({
+    url: '/Api/Index/getBannerData',
+    method: 'GET',
+    ...config
+  })
+}
+
+const getMaterial = config => { // 发圈素材分类数据接口
+  return service({
+    url: '/Api/Material/catData',
+    method: 'GET',
+    ...config
+  })
+}
+
+const MaterialIndex = config => { // 发圈素材数据
+  return service({
+    url: '/Api/Material/index',
+    method: 'GET',
+    ...config
+  })
+}
+
+const MaterialOperate = config => { //转发/收藏/下载操作
+  return service({
+    url: '/Api/Material/operate',
+    method: 'POST',
+    ...config
+  })
+}
+
+const collectionData = config => { //收藏-发圈素材数据接口
+  return service({
+    url: '/Api/Material/collectionData',
+    method: 'GET',
+    ...config
+  })
+}
+
+const Mediainsert = config => { // 新增5G新传媒数据
+  return service({
+    url: '/Api/Media/insert',
+    method: 'POST',
+    ...config
+  })
+}
+
+const Testing = config => { // 检测报告数据
+  return service({
+    url: '/Api/Testing/index',
+    method: 'GET',
+    ...config
+  })
+}
+
+const testingDetails = config => { // 检测报告详情数据
+  return service({
+    url: '/Api/Testing/details',
+    method: 'GET',
+    ...config
+  })
+}
+
+const getShowStatus = config => { // 判断是否隐藏审核不通过相关资料
+  return service({
+    url: '/Api/Index/getShowStatus',
+    method: 'GET',
+    ...config
+  })
+}
+
+
 module.exports = {
   getIndex,
   getUserInfo,
@@ -176,5 +305,21 @@ module.exports = {
   getNoticeList,
   NoticeDetails,
   getMedia,
+  MediaDetails,
+  catData,
+  catMiniData,
+  getBrand,
+  BrandDetails,
+  Curriculum,
+  CurriculumDetails,
+  getBannerData,
+  getMaterial,
+  MaterialIndex,
+  MaterialOperate,
+  collectionData,
+  Mediainsert,
+  Testing,
+  testingDetails,
+  getShowStatus,
 }
 

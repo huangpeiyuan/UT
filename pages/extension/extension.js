@@ -1,5 +1,5 @@
 // pages/home/index.js
-// const api = require('../../utils/api.js')
+const api = require('../../utils/api.js')
 const util = require('../../utils/util.js')
 import Card from './card';
 // 获取应用实例
@@ -12,14 +12,17 @@ Page({
   data: {
     posterImg: 0, //海报图片数量
     image: "",
-    message: "",
+    message: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    let obj = JSON.parse(options.id)
+    this.setData({
+      message: obj,
+    })
   },
 
   /**
@@ -80,7 +83,7 @@ Page({
 
   loadFinish() {
     this.data.posterImg++
-    if (this.data.posterImg == 2) {
+    if (this.data.posterImg == 1) {
       this.setData({
         paintPallette: new Card(this.data.message).palette(),
       });
@@ -93,10 +96,9 @@ Page({
     this.isSave = true
     if (this.imagePath && typeof this.imagePath === 'string') {
       this.isSave = false;
-      util.saveImageToPhotosAlbum(this.imagePath)
+      util.pressImageToPhotosAlbum(this.imagePath)
       util.hideLoading(true)
     }
     util.hideLoading()
-    console.log(111)
   },
 })

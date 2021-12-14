@@ -54,3 +54,232 @@
   color: #EBCF9A;
   margin-top: 52rpx;
 }
+
+/* pages/all/index.wxss */
+.search_box {
+  position: relative;
+  margin: 0 18rpx 26rpx;
+}
+
+.search {
+  height: 56rpx;
+  background: #F6F5F5;
+  border-radius: 28rpx;
+  padding-left: 80rpx;
+  font-size: 30rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 12rpx;
+  left: 30rpx;
+  color: #BBBBBB;
+}
+
+.mall {
+  position: relative;
+}
+
+.tabs {
+  width: 160rpx;
+  background-color: #F5F5F5;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs .item {
+  padding: 32rpx 24rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 40rpx;
+}
+
+.tabs .item.on {
+  position: relative;
+  color: #333;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.tabs .item.on:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8rpx;
+  height: 100%;
+  background-color: #EBCF9A;
+}
+
+.lists .item {
+  margin-bottom: 30rpx;
+}
+
+.lists .item .image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.p_name .badge {
+  min-width: 80rpx;
+  text-align: center;
+  display: inline-block;
+  font-size: 24rpx;
+  position: relative;
+  top: -1px;
+  margin-right: 8rpx;
+}
+
+.coupon-item {
+  margin-top: 16rpx;
+  position: relative;
+  background: #fff;
+  padding: 24rpx 50rpx;
+}
+
+.mall-panel{
+  background-color: #F5F6F7;
+}
+
+.material_title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.material_text {
+  font-size: 24rpx;
+  color: #333333;
+  margin: 8rpx 0 24rpx;
+}
+
+.material_image image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 24rpx;
+  flex-wrap: wrap;
+}
+
+.material_footer {
+  font-size: 24rpx;
+  color: #999999;
+  justify-content: space-between;
+}
+
+.dot_box {
+  width: 44rpx;
+  height: 23rpx;
+  background: #F6F5F5;
+  border-radius: 2rpx;
+  margin: 25rpx 0 30rpx;
+}
+
+.dot {
+  width: 10rpx;
+  height: 10rpx;
+  background: #EBCF9A;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.forward_box {
+  width: 341rpx;
+  background: #666666;
+  border-radius: 2rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  justify-content: space-between;
+  padding: 5rpx 20rpx;
+  position: absolute;
+  bottom: 23rpx;
+  right: 75rpx;
+}
+
+.forward image {
+  width: 27rpx;
+  height: 27rpx;
+  margin-right: 4rpx;
+}
+
+.line {
+  height: 24rpx;
+  border: 2rpx solid #515151;
+}
+
+.tips {
+  width: 640rpx;
+  height: 322rpx;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  position: fixed;
+  top: 35%;
+  left: 8%;
+  z-index: 999;
+  text-align: center;
+  font-size: 32rpx;
+  color: #333333;
+  padding: 48rpx 0 30rpx;
+}
+
+.tips_text {
+  margin: 30rpx 0 46rpx;
+}
+
+.tisp_btn {
+  font-size: 32rpx;
+  color: #EBCF9A;
+  padding-top: 30rpx;
+  border-top: 1px solid #dddddd;
+}
+
+.model {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+
+.search_box2 {
+  position: relative;
+  margin: 24rpx 0 0;
+  padding: 0 20rpx 20rpx;
+  border-bottom: 1px solid #DDDDDD;
+  background: #fff;
+  width: 100%;
+}
+
+.search {
+  height: 56rpx;
+  background: #F6F5F5;
+  border-radius: 28rpx;
+  padding-left: 80rpx;
+  font-size: 30rpx;
+  margin-right: 32rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 12rpx;
+  left: 60rpx;
+  color: #BBBBBB;
+}
+
+.close_icon {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 12rpx;
+  right: 80rpx;
+}
+
+.material .coupon-item:first-child{
+  margin: 0;
+}

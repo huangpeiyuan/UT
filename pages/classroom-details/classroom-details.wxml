@@ -1,15 +1,34 @@
 <!--pages/classroom-details/classroom-details.wxml-->
 <view class="classroom-details">
-  <view class="classroom-header">《依美燕窝睡眠面膜使用手法》</view>
+  <view class="classroom-header">{{CurriculumList.title}}</view>
   <view class="v-center classroom-word">
-    <view class="classroom-text">发布时间：2018/12/17</view>
-    <view class="classroom-text2">浏览数：2200</view>
+    <view class="classroom-text">发布时间：{{CurriculumList.created_at}}</view>
+    <view class="classroom-text2">浏览数：{{CurriculumList.see_num}}</view>
   </view>
-  <video src="../../video/video.mp4" class="classroom-video" controls custom-cache="{{false}}"></video>
+  <!-- 视频 -->
+  <view wx:if="{{is_show === 1}}">
+    <view wx:for="{{CurriculumList.path}}" wx:key="id" wx:if="{{istype === 1}}">
+      <!-- <video src="{{item}}" class="classroom-video" autoplay controls></video> -->
+      <qy-video class="classroom-video" extraProps="{{extraProps}}" />
+    </view>
+  </view>
+  <!-- 音频 -->
+  <view wx:if="{{is_show === 1}}">
+    <view class="audio_box" wx:if="{{istype === 2}}">
+      <view class='progress'>
+        <text class="start_time">{{progressText}}</text>
+        <slider class='bar' bindchange="sliderChange" bindchanging="sliderChanging" value="{{progress}}" step="1" min='0' max='{{duration}}' activeColor="#EBCF9A " block-size="18" block-color="#FFFFFF" />
+        <text class="end_time">{{durationText}}</text>
+      </view>
+      <view class='buttons'>
+        <image class='button' bindtap='playOrpause' src='{{playStatus?"../../images/pauses.png":"../../images/play.png"}}'></image>
+      </view>
+    </view>
+  </view>
   <view class="v-center classroom-content">
     <image src="../../images/book.png"></image>
     <view>课程介绍</view>
   </view>
-  <view class="classroom-text3">依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法依美燕窝睡眠面膜使用手法</view>
-  <image src="../../images/banner-1.jpg" class="classroom-img"></image>
+  <rich-text class="classroom-text3" nodes="{{CurriculumList.content}}"></rich-text>
+  <image src="{{CurriculumList.image}}" class="classroom-img"></image>
 </view>

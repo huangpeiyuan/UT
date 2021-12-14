@@ -142,7 +142,7 @@
   justify-content: space-between;
   padding: 5rpx 20rpx;
   position: absolute;
-  bottom: 22rpx;
+  bottom: 23rpx;
   right: 75rpx;
 }
 
@@ -191,4 +191,19 @@
   top: 0;
   left: 0;
   z-index: 998;
+}
+
+.close_icon {
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  z-index: 22;
+}
+
+.result {
+  font-size: 30rpx;
+  color: #BBBBBB;
+  position: fixed;
+  right: 31%;
+  top: 50%;
 }

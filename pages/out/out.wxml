@@ -1,0 +1,2 @@
+<!--pages/out/out.wxml-->
+<web-view src="https://ut.315mao.com/Admin/Login/index"></web-view>

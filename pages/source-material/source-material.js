@@ -1,181 +1,31 @@
 // pages/source-material/source-material.js
+const util = require('../../utils/util.js')
+const api = require('../../utils/api.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    catalog: [
-      {
-        id: 1,
-        name: "健康滋补"
-      },
-      {
-        id: 2,
-        name: "健康滋补"
-      },
-      {
-        id: 3,
-        name: "健康滋补"
-      },
-      {
-        id: 4,
-        name: "健康滋补"
-      },
-    ],
+    catalog: "",
     catId: '',
     catalogIndex: 0,
-    lists: [
-      {
-        id: 1,
-        title: "抗衰修护燕窝美容油",
-        text: "素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容。",
-        images: [
-          {
-            id: 1,
-            src: "../../images/banner-1.jpg"
-          },
-          {
-            id: 2,
-            src: "../../images/banner-2.jpg"
-          },
-          {
-            id: 3,
-            src: "../../images/banner-3.jpg"
-          },
-        ],
-        time: "2021-01-01 22:10:02",
-        release: "发布",
-        isCollection: true,
-        isOperation: false,
-      },
-      {
-        id: 2,
-        title: "抗衰修护燕窝美容油22",
-        text: "素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容22。",
-        images: [
-          {
-            id: 1,
-            src: "https://img0.baidu.com/it/u=3436810468,4123553368&fm=26&fmt=auto"
-          },
-          {
-            id: 2,
-            src: "https://img0.baidu.com/it/u=3436810468,4123553368&fm=26&fmt=auto"
-          },
-          {
-            id: 3,
-            src: "https://img0.baidu.com/it/u=3436810468,4123553368&fm=26&fmt=auto"
-          },
-        ],
-        time: "2021-01-01 22:10:02",
-        release: "发布",
-        isCollection: true,
-        isOperation: false,
-      },
-      {
-        id: 3,
-        title: "抗衰修护燕窝美容油",
-        text: "素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容。",
-        images: [
-          {
-            id: 1,
-            src: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp05%2F19100122420C335-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640860079&t=372c766db9748f63fe26536660c6a95f"
-          },
-          {
-            id: 2,
-            src: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp05%2F19100122420C335-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640860079&t=372c766db9748f63fe26536660c6a95f"
-          },
-          {
-            id: 3,
-            src: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp05%2F19100122420C335-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640860079&t=372c766db9748f63fe26536660c6a95f"
-          },
-        ],
-        time: "2021-01-01 22:10:02",
-        release: "发布",
-        isCollection: true,
-        isOperation: false,
-      },
-      {
-        id: 4,
-        title: "抗衰修护燕窝美容油",
-        text: "素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容。",
-        images: [
-          {
-            id: 1,
-            src: "../../images/banner-1.jpg"
-          },
-          {
-            id: 2,
-            src: "../../images/banner-2.jpg"
-          },
-          {
-            id: 3,
-            src: "../../images/banner-3.jpg"
-          },
-        ],
-        time: "2021-01-01 22:10:02",
-        release: "发布",
-        isCollection: true,
-        isOperation: false,
-      },
-      {
-        id: 5,
-        title: "抗衰修护燕窝美容油",
-        text: "素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容。",
-        images: [
-          {
-            id: 1,
-            src: "../../images/banner-1.jpg"
-          },
-          {
-            id: 2,
-            src: "../../images/banner-2.jpg"
-          },
-          {
-            id: 3,
-            src: "../../images/banner-3.jpg"
-          },
-        ],
-        time: "2021-01-01 22:10:02",
-        release: "发布",
-        isCollection: true,
-        isOperation: false,
-      },
-      {
-        id: 6,
-        title: "抗衰修护燕窝美容油",
-        text: "素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容素材中心文字内容。",
-        images: [
-          {
-            id: 1,
-            src: "../../images/banner-1.jpg"
-          },
-          {
-            id: 2,
-            src: "../../images/banner-2.jpg"
-          },
-          {
-            id: 3,
-            src: "../../images/banner-3.jpg"
-          },
-        ],
-        time: "2021-01-01 22:10:02",
-        release: "发布",
-        isCollection: true,
-        isOperation: false,
-      },
-    ],
+    lists: [],
     isCollection: true, // 收藏按钮
     isTips: false,// 弹框
     percent: 0,
     schedule: false,
+    searchContent: "",
+    href_id: "",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      href_id: options.id,
+    })
   },
 
   /**
@@ -189,25 +39,101 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getMaterial();
   },
 
-  changeHandle: function (e) { //切换产品类型
+  // 发圈素材分类
+  getMaterial() {
+    let _this = this;
+    api.getMaterial().then(res => {
+      this.setData({
+        catalog: res.data.catData
+      })
+      _this.loadMore() //产品列表
+    }).catch(err => {
+      util.hideLoading()
+    })
+  },
+
+  // 搜索
+  bindInputBlur(e) {
+    this.setData({
+      searchContent: e.detail.value.trim(),
+      catId: "",
+      catalogIndex: "",
+    })
+    this.loadMore();
+  },
+
+  //切换产品类型
+  changeHandle: function (e) {
     let index = Number(e.currentTarget.dataset.catalogindex)
-    console.log(e.currentTarget.dataset.catalogindex);
     if (index !== this.data.catalogIndex) {
       this.setData({
         catalogIndex: index,
         catId: this.data.catalog[index].id
       })
-      // this.resetLoadData()
-      // // 当catalog的选中类型id为1时，默认为优惠券。其他为商品
-      // if (this.data.catalog[index].id === 1) {
-      //   this.loadCoupons() //产品列表
-      // } else {
-      //   this.loadMore() //产品列表
-      // }
+      this.loadMore() //产品列表
     }
+  },
+
+  // 产品数据
+  loadMore() {
+    let _this = this
+    let userId = wx.getStorageSync('userId')
+    let {
+      catId
+    } = _this.data
+    _this.data.loading = true
+    util.showLoading()
+    let data = {};
+    if (this.data.href_id === undefined && this.data.searchContent === "") {
+      data = {
+        catId: catId || this.data.catalog[0].id,
+        userId: userId,
+      }
+    } else if (this.data.searchContent !== "") {
+      data = {
+        userId: userId,
+        catId: "",
+        search: this.data.searchContent,
+      }
+    } else {
+      data = {
+        catId: catId || this.data.href_id,
+        userId: userId,
+      }
+    }
+    api.MaterialIndex({
+      data: data
+    }).then(res => {
+      util.hideLoading()
+      if (this.data.href_id !== undefined) {
+        _this.setData({
+          loading: false,
+          lists: res.data.materialData,
+          catId: catId || this.data.href_id,
+          catalogIndex: this.data.href_id
+        })
+      } else {
+        _this.setData({
+          loading: false,
+          lists: res.data.materialData,
+          catId: catId || this.data.catalog[0].id,
+        })
+      }
+    }).catch(err => {
+      _this.data.page--
+      _this.data.loading = false
+    })
+  },
+
+  upper: function () {
+    this.loadMore() //产品列表
+  },
+
+  lower: function () {
+    this.loadMore() //产品列表
   },
 
   // 操作栏
@@ -225,28 +151,72 @@ Page({
 
   // 收藏
   switchCollection(e) {
+    let _this = this;
     let id = e.currentTarget.dataset.id
-    this.data.lists.forEach(item => {
-      if (item.id === id) {
-        item.isCollection = !item.isCollection;
-        if (item.isCollection === false) {
-          wx.showToast({
-            title: '收藏成功',
-            image: '../../images/success.png',
-            duration: 2000
-          })
-        } else {
-          wx.showToast({
-            title: '取消成功',
-            image: '../../images/success.png',
-            duration: 2000
-          })
+    let status = e.currentTarget.dataset.status
+    let type = e.currentTarget.dataset.type
+    let userId = wx.getStorageSync('userId')
+    if (userId) {
+      _this.data.lists.forEach(item => {
+        if (item.id === id) {
+          if (_this.data.isCollection === true) {
+            api.MaterialOperate({
+              data: {
+                type: type,
+                materialId: id,
+                status: status,
+                userId: userId
+              }
+            }).then(res => {
+              wx.showToast({
+                title: '收藏成功',
+                image: '../../images/success.png',
+                duration: 2000,
+                complete: function () {
+                  let timer = setTimeout(function () {
+                    clearTimeout(timer)
+                    _this.loadMore();
+                  }, 1500)
+                }
+              })
+            }).catch(err => {
+              util.hideLoading()
+            })
+          } else {
+            api.MaterialOperate({
+              data: {
+                type: type,
+                materialId: id,
+                status: status,
+                userId: userId
+              }
+            }).then(res => {
+              wx.showToast({
+                title: '取消成功',
+                image: '../../images/success.png',
+                duration: 2000,
+                complete: function () {
+                  let timer = setTimeout(function () {
+                    clearTimeout(timer)
+                    _this.loadMore();
+                  }, 1500)
+                }
+              })
+            }).catch(err => {
+              util.hideLoading()
+            })
+          }
         }
-      }
-    })
-    this.setData({
-      lists: this.data.lists
-    })
+      })
+      this.setData({
+        lists: this.data.lists
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
+
   },
 
   // 下载
@@ -254,27 +224,37 @@ Page({
     let _this = this;
     let id = e.currentTarget.dataset.id
     let index = e.currentTarget.dataset.index
-    console.log(e.currentTarget.dataset.index);
+    let type = e.currentTarget.dataset.type
+    console.log(id);
     this.data.lists.forEach(item => {
       if (item.id === id) {
-        item.isOperation = !item.isOperation;
+        // item.isOperation = !item.isOperation;
         // 复制文字
-        wx.setClipboardData({
-          data: item.title + item.text,
-          success: function (res) {
-            wx.hideLoading();
-            wx.getClipboardData({
-              success: function (res) {
-
-              }
-            })
+        api.MaterialOperate({
+          data: {
+            type: type,
+            materialId: id,
           }
+        }).then(res => {
+          wx.setClipboardData({
+            data: item.title + item.content,
+            success: function (res) {
+              wx.hideLoading();
+              wx.getClipboardData({
+                success: function (res) {
+                }
+              })
+            }
+          })
+          _this.getsave(0, this.data.lists[index].image.length, index)
+          this.setData({
+            lists: this.data.lists
+          })
+        }).catch(err => {
+          util.hideLoading()
         })
-        _this.getsave(0, this.data.lists[index].images.length, index)
+
       }
-    })
-    this.setData({
-      lists: this.data.lists
     })
   },
 
@@ -288,9 +268,11 @@ Page({
   // 保存图片
   getsave(i, length, index) {
     var _this = this;
-    console.log(this.data.lists[index].images[i].src);
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.downloadFile({
-      url: this.data.lists[index].images[i].src,
+      url: this.data.lists[index].image[i],
       success: (res) => {
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,
@@ -313,6 +295,29 @@ Page({
           },
         })
       },
+    })
+  },
+
+  // 清空输入框
+  closeInput() {
+    this.setData({
+      searchContent: "",
+    })
+  },
+
+  // 图片预览
+  preview(e) {
+    let currentUrl = e.currentTarget.dataset.src
+    let id = e.currentTarget.dataset.id
+    let arr = this.data.lists.filter(item => {
+      if (item.id == id) {
+        return item;
+      }
+    });
+    console.log(arr[0].image);
+    wx.previewImage({
+      current: currentUrl, // 当前显示图片的http链接
+      urls: arr[0].image // 需要预览的图片http链接列表
     })
   },
 
@@ -347,7 +352,22 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (res) {
+    let id = res.target.dataset.id
+    let type = res.target.dataset.type
+    console.log(id);
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      api.MaterialOperate({
+        data: {
+          type: type,
+          materialId: id,
+        }
+      }).then(res => {
 
+      }).catch(err => {
+        util.hideLoading()
+      })
+    }
   }
 })

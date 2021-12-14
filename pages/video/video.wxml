@@ -1,8 +1,9 @@
 <!--pages/video/video.wxml-->
 <view class="video-container">
-  <video id='myvideo' src="../../video/video.mp4" autoplay="true" controls></video>
+  <!-- <video id='myvideo' src="{{videoList.path}}" autoplay="{{isVideo}}" controls></video> -->
+  <qy-video id='myvideo' extraProps="{{extraProps}}" />
   <view class="iconfont ant-a-7Iconarrow1left return" bindtap="return"></view>
-  <text class="video_text">行动力大学私域流量课堂1+1行动力大学私域流量课堂1+1行动力大学私域流量课堂1+1</text>
+  <text class="video_text">{{videoList.title}}</text>
   <view class="share_img" bindtap="showShareType">
     <image src="../../images/share.png"></image>
   </view>
@@ -22,7 +23,7 @@
           </button>
         </view>
         <view class="line"></view>
-        <view class="flex1 size0" bindtap="createPoster">
+        <view class="flex1 size0" data-obj="{{videoList.user}}"  bindtap="createPoster">
           <image src="../../images/poster_share.png" style="width: 88rpx;height:88rpx;" />
           <view class="mt-8 size28" style="color:#333">海报分享</view>
         </view>

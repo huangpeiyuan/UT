@@ -3,6 +3,39 @@ page {
   background: #F5F6F7;
 }
 
+.search_box {
+  position: relative;
+  margin: 24rpx 0 26rpx;
+  padding: 0 20rpx 20rpx;
+  border-bottom: 1px solid #DDDDDD;
+  background: #fff;
+  width: 100%;
+}
+
+.search {
+  height: 56rpx;
+  background: #F6F5F5;
+  border-radius: 28rpx;
+  padding-left: 80rpx;
+  font-size: 30rpx;
+  margin-right: 32rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 12rpx;
+  left: 60rpx;
+  color: #BBBBBB;
+}
+
+.close_icon {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 12rpx;
+  right: 80rpx;
+}
+
 .collection_box {
   background: #fff;
   margin-top: 20rpx;
@@ -70,7 +103,7 @@ page {
   color: #FFFFFF;
   padding: 0 20rpx;
   position: absolute;
-  bottom: 90rpx;
+  bottom: 110rpx;
   right: 110rpx;
 }
 
@@ -119,4 +152,12 @@ page {
   top: 0;
   left: 0;
   z-index: 998;
+}
+
+.notyet {
+  font-size: 30rpx;
+  color: #BBBBBB;
+  position: fixed;
+  left: 43%;
+  top: 42%;
 }

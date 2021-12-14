@@ -2,5 +2,6 @@
   "navigationBarTitleText": "邀请推广",
   "usingComponents": {
     "painter": "/components/painter/painter"
-  }
+  },
+  "enablePullDownRefresh":false
 }

@@ -1,24 +1,8 @@
 <!--pages/core/core.wxml-->
 <view class="core_box">
   <view class="core_title">检测报告列表</view>
-  <view class="v-center core_content">
-    <view>问题描述问题描述问题描述问题描述问题描述</view>
-    <image src="../../images/arrow.png"></image>
-  </view>
-  <view class="v-center core_content">
-    <view>问题描述问题描述问题描述问题描述问题描述</view>
-    <image src="../../images/arrow.png"></image>
-  </view>
-  <view class="v-center core_content">
-    <view>问题描述问题描述问题描述问题描述问题描述</view>
-    <image src="../../images/arrow.png"></image>
-  </view>
-  <view class="v-center core_content">
-    <view>问题描述问题描述问题描述问题描述问题描述</view>
-    <image src="../../images/arrow.png"></image>
-  </view>
-  <view class="v-center core_content">
-    <view>问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描</view>
+  <view class="v-center core_content" wx:for="{{testingList}}" wx:key="id" data-id="{{item.id}}" bindtap="goTesting">
+    <view>{{item.title}}</view>
     <image src="../../images/arrow.png"></image>
   </view>
 </view>

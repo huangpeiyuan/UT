@@ -15,13 +15,16 @@ Page({
 		notice: "",
 		userCode: "",
 		rawData: {},
+		userInof: "",
+		banner: "",
+		isUser: true,
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.getBannerData();
 	},
 
 	/**
@@ -36,6 +39,24 @@ Page({
 	 */
 	onShow: function () {
 		this.getNotice();
+		this.getUserInfo();
+	},
+
+	// 个人信息
+	getUserInfo() {
+		let userId = wx.getStorageSync('userId')
+		api.getUserInfo({
+			data: {
+				userId: userId
+			}
+		}).then(res => {
+			this.setData({
+				userInof: res.data.user,
+				isUser: false,
+			})
+		}).catch(err => {
+			util.hideLoading()
+		})
 	},
 
 	// 通知
@@ -55,6 +76,31 @@ Page({
 		wx.navigateTo({
 			url: `/pages/notice/notice?id=${id}`,
 		})
+	},
+
+	// banner图
+	getBannerData() {
+		api.getBannerData().then(res => {
+			this.setData({
+				banner: res.data.bannerData[2]
+			})
+		}).catch(err => {
+			util.hideLoading()
+		})
+	},
+
+	// 跳转到收藏
+	goCollection() {
+		let userId = wx.getStorageSync('userId')
+		if (userId === "") {
+			wx.navigateTo({
+				url: '/pages/login/login'
+			})
+		} else {
+			wx.navigateTo({
+				url: '/pages/collection/collection'
+			})
+		}
 	},
 
 	/**

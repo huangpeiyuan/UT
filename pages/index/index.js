@@ -12,7 +12,7 @@ Page({
   data: {
     rotationList: [], // 轮播图
     bannerList: [],  // banner图
-    curriculumNum:'', // 总数
+    curriculumNum: '', // 总数
   },
 
   /**
@@ -42,12 +42,69 @@ Page({
     api.getIndex().then(res => {
       util.hideLoading()
       _this.setData({
-        rotationList:res.data.rotationData,
+        rotationList: res.data.rotationData,
         bannerList: res.data.bannerData,
-        curriculumNum:res.data.curriculumNum,
+        curriculumNum: res.data.curriculumNum,
       })
     }).catch(err => {
       util.hideLoading()
+    })
+  },
+
+  // 轮播图跳转
+  jump(e) {
+    let id = e.currentTarget.dataset.href_id;
+    let type = Number(e.currentTarget.dataset.href_type);
+    console.log(id);
+    if (type === 1) {
+      wx.navigateTo({
+        url: `/pages/brand-list/brand-list?id=${id}`,
+      })
+    } else if (type === 2) {
+      wx.reLaunch({
+        url: `/pages/source-material/source-material?id=${id}`,
+      })
+    } else if (type === 3) {
+      wx.navigateTo({
+        url: `/pages/classroom-details/classroom-details?id=${id}`,
+      })
+    } else if (type === 4) {
+      wx.navigateTo({
+        url: `/pages/core-details/core-details?id=${id}`,
+      })
+    }
+  },
+
+  // banner跳转
+  jumpBanner(e) {
+    let id = e.currentTarget.dataset.href_id;
+    let type = Number(e.currentTarget.dataset.href_type);
+    console.log(id);
+    if (type === 1) {
+      wx.navigateTo({
+        url: `/pages/brand-list/brand-list?id=${id}`,
+      })
+    } else if (type === 2) {
+      wx.reLaunch({
+        url: `/pages/source-material/source-material?id=${id}`,
+      })
+    } else if (type === 3) {
+      wx.navigateTo({
+        url: `/pages/classroom-details/classroom-details?id=${id}`,
+      })
+    } else if (type === 4) {
+      wx.navigateTo({
+        url: `/pages/core-details/core-details?id=${id}`,
+      })
+    }
+  },
+
+  // 课程跳转
+  jumpClass(e) {
+    let id = e.currentTarget.dataset.id;
+    console.log(id);
+    wx.navigateTo({
+      url: `/pages/classroom-details/classroom-details?id=${id}`,
     })
   },
 

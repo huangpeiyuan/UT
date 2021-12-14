@@ -1,18 +1,20 @@
 // pages/core/core.js
+const api = require('../../utils/api.js')
+const util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    testingList: "",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getTesting();
   },
 
   /**
@@ -27,6 +29,26 @@ Page({
    */
   onShow: function () {
 
+  },
+
+  getTesting() {
+    api.Testing().then(res => {
+      this.setData({
+        testingList: res.data.testingData
+      })
+      console.log(this.data.testingList);
+    }).catch(err => {
+      util.hideLoading()
+    })
+  },
+
+  // 跳转详情页
+  goTesting(e) {
+    let id = e.currentTarget.dataset.id
+    console.log(id);
+    wx.navigateTo({
+      url: `/pages/core-details/core-details?id=${id}`,
+    })
   },
 
   /**

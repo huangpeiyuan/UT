@@ -1,21 +1,22 @@
 <!--pages/extension/extension.wxml-->
-<painter customStyle="position:fixed;left:-640rpx;" customActionStyle="{{customActionStyle}}"
-  dancePalette="{{template}}" palette="{{paintPallette}}" bind:imgOK="onImgOK" action="{{action}}" use2D="{{false}}" />
-<view class="extension">
-  <image src="../../images/extension.png" class="bg"></image>
-  <image src="../../images/ewm.jpg" class="ewm"></image>
-  <view class="footer">
-    <image src="../../images/extension_footer.png" style="width:710rpx;height:197rpx;"></image>
-    <view class="avatar">
-      <view class="avatar_img">
-        <image src="../../images/index-nav1-icon-1.png"></image>
-      </view>
-      <view class="avatar_word">
-        <view class="avatar_text">用户昵称：</view>
-        <view class="avatar_text2">微信昵称。</view>
-        <view class="avatar_text3">邀请您扫码了解详情！</view>
+<view class="b_sizing" style="width:100%;height:100%;">
+  <painter customStyle="position:fixed;left:-640rpx;" customActionStyle="{{customActionStyle}}" dancePalette="{{template}}" palette="{{paintPallette}}" bind:imgOK="onImgOK" bind:touchEnd="touchEnd" action="{{action}}" use2D="{{fales}}" />
+  <view class="extension" bindtap="saveImage">
+    <image src="../../images/extension.png" class="bg"></image>
+    <image src="../../images/ewm.jpg" class="ewm" bindload="loadFinish"></image>
+    <view class="footer">
+      <image src="../../images/extension_footer.png" style="width:710rpx;height:197rpx;"></image>
+      <view class="avatar">
+        <view class="avatar_img">
+          <image src="{{message.avatarUrl}}" bindload="loadFinish"></image>
+        </view>
+        <view class="avatar_word">
+          <view class="avatar_text">用户昵称：</view>
+          <view class="avatar_text2">{{message.nickName}}</view>
+          <view class="avatar_text3">邀请您扫码了解详情！</view>
+        </view>
       </view>
     </view>
+    <view class="footer_text">长按图片即可保存到手机相册</view>
   </view>
-  <view class="footer_text" bindtap="saveImage">长按图片即可保存到手机相册</view>
 </view>

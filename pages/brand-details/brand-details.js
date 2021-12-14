@@ -1,18 +1,24 @@
 // pages/brand-details/brand-details.js
+const util = require('../../utils/util.js')
+const api = require('../../utils/api.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    brandId: "",
+    brandList: "",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      brandId: options.id
+    })
+    this.brandDetails();
   },
 
   /**
@@ -27,6 +33,22 @@ Page({
    */
   onShow: function () {
 
+  },
+
+  // 品牌介绍数据接口
+  brandDetails() {
+    api.getBrand({
+      data: {
+        brandId: this.data.brandId
+      }
+    }).then(res => {
+      this.setData({
+        brandList: res.data.brandData,
+      })
+      console.log(this.data.brandList);
+    }).catch(err => {
+      util.hideLoading()
+    })
   },
 
   /**

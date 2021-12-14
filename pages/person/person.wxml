@@ -1,7 +1,7 @@
 <!--pages/person/person.wxml-->
 <view>
-	<!-- 登录 -->
-	<navigator url="../login/login" class="preson_info">
+	<!-- 未登录 -->
+	<navigator url="../login/login" class="preson_info" wx:if="{{isUser}}">
 		<view class="preson_bg">
 			<image src="../../images/person.png"></image>
 		</view>
@@ -10,9 +10,21 @@
 				<image src="../../images/login.png"></image>
 				<view>点击登录</view>
 			</view>
-			<!-- <view class="preson_id">ID：<text>2233442233</text></view> -->
 		</view>
 	</navigator>
+	<!-- 登录 -->
+	<view class="preson_info" wx:else>
+		<view class="preson_bg">
+			<image src="../../images/person.png"></image>
+		</view>
+		<view class="avatar v-center">
+			<view class="v-center" lang="zh_CN">
+				<image src="{{userInof.avatarUrl}}"></image>
+				<view>{{userInof.nickName}}</view>
+			</view>
+			<!-- <view class="preson_id">ID：<text>2233442233</text></view> -->
+		</view>
+	</view>
 	<view class="content">
 		<!-- 通告 -->
 		<view class="announcement v-center" data-id="{{notice.id}}" bindtap="jumpNotice">
@@ -24,27 +36,27 @@
 		</view>
 
 		<view class="person_banner">
-			<image src="../../images/banner-1.jpg"></image>
+			<image src="{{banner.image}}"></image>
 		</view>
 
 		<view class="service">
 			<view class="service_title">服务中心</view>
 			<view class="collection">
-				<view class="v-center mt_32">
+				<view class="v-center mt_32" bindtap="goCollection">
 					<image src="../../images/collection.png" class="collection_img"></image>
 					<view class="collection_text">我的收藏</view>
 					<view class="iconfont ant-a-7Iconarrow2right collection_i flex1"></view>
 				</view>
-				<view class="v-center mt_32">
+				<button class="v-center mt_32" open-type="contact" style="width: 100%;padding: 0;background: #fff;font-weight: 400;">
 					<image src="../../images/service.png" class="collection_img"></image>
 					<view class="collection_text">在线客服</view>
 					<view class="iconfont ant-a-7Iconarrow2right collection_i flex1"></view>
-				</view>
-				<view class="v-center mt_32">
+				</button>
+				<navigator url="/pages/out/out" class="v-center mt_32">
 					<image src="../../images/core.png" class="collection_img"></image>
 					<view class="collection_text">下单中心</view>
 					<view class="iconfont ant-a-7Iconarrow2right collection_i flex1"></view>
-				</view>
+				</navigator>
 				<navigator url="../notice_list/notice_list" class="v-center mt_32">
 					<image src="../../images/notice.png" class="collection_img"></image>
 					<view class="collection_text">公告通知</view>

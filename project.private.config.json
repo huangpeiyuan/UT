@@ -129,7 +129,7 @@
         {
           "name": "pages/video/video",
           "pathName": "pages/video/video",
-          "query": "",
+          "query": "id=1",
           "scene": null
         },
         {
@@ -153,6 +153,162 @@
         {
           "name": "pages/notice_list/notice_list",
           "pathName": "pages/notice_list/notice_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/extension/extension",
+          "pathName": "pages/extension/extension",
+          "query": "avatar=https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FmicKFCG6yqXDFeEgxEDJPeMr02sYlK5fEY7sxlibFYYPmjHXckMHdBEMSO5YOWoerIfC76EKfsHkEicD6PdwENdOw%2F132&nickName=%E8%B5%B5%E5%B0%8F%E7%99%BD",
+          "scene": null
+        },
+        {
+          "name": "pages/introduce/introduce",
+          "pathName": "pages/introduce/introduce",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/audio-details/audio-details",
+          "pathName": "pages/audio-details/audio-details",
+          "query": "id=2",
+          "scene": null
+        },
+        {
+          "name": "pages/source-material/source-material",
+          "pathName": "pages/source-material/source-material",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/source-material/source-material",
+          "pathName": "pages/source-material/source-material",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/collection/collection",
+          "pathName": "pages/collection/collection",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/upload/upload",
+          "pathName": "pages/upload/upload",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/introduce/introduce",
+          "pathName": "pages/introduce/introduce",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/core/core",
+          "pathName": "pages/core/core",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/media/media",
+          "pathName": "pages/media/media",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/source-material/source-material",
+          "pathName": "pages/source-material/source-material",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/source-material/source-material",
+          "pathName": "pages/source-material/source-material",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/university/university",
+          "pathName": "pages/university/university",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/source-material/source-material",
+          "pathName": "pages/source-material/source-material",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/person/person",
+          "pathName": "pages/person/person",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/upload/upload",
+          "pathName": "pages/upload/upload",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/media/media",
+          "pathName": "pages/media/media",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/classroom-details/classroom-details",
+          "pathName": "pages/classroom-details/classroom-details",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/university/university",
+          "pathName": "pages/university/university",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/video/video",
+          "pathName": "pages/video/video",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/media/media",
+          "pathName": "pages/media/media",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/source-material/source-material",
+          "pathName": "pages/source-material/source-material",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/collection/collection",
+          "pathName": "pages/collection/collection",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/media/media",
+          "pathName": "pages/media/media",
           "query": "",
           "scene": null
         }

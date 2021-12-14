@@ -12,6 +12,8 @@ Page({
     isNew: true,
     hasUserInfo: false,
     rawData: {},
+    newUser: "",
+    userId: "",
   },
 
   /**
@@ -21,11 +23,9 @@ Page({
     let _this = this
     wx.login({
       success: function (res) {
-        console.log(res);
         _this.setData({
           code: res.code
         })
-        // console.log(_this.data.code);
       }
     })
   },
@@ -47,42 +47,47 @@ Page({
   // 获取用户信息
   getUserProfile(e) {
     var _this = this;
-    console.log(_this.data.code);
     api.getUser({
       data: {
         code: _this.data.code
       }
     }).then(res => {
-      console.log(_this.data.code);
-      if (res.data.newUser === 1) {
-        wx.getUserProfile({
-          lang: 'zh_CN',
-          desc: '用于完善用户个人信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-          success: (res) => {
+      this.setData({
+        newUser: res.data.newUser,
+        userId: res.data.userId
+      })
+      wx.getUserProfile({
+        lang: 'zh_CN',
+        desc: '用于完善用户个人信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+        success: (res) => {
+          _this.setData({
+            rawData: res.rawData,
+          })
+          if (_this.data.newUser === 1) {
             _this.setData({
-              rawData: res.rawData,
-              hasUserInfo: true
+              hasUserInfo: true,
+            })
+          } else {
+            wx.setStorageSync('userId', this.data.userId);
+            wx.showToast({
+              title: '登录成功',
+              complete: function () {
+                let timer = setTimeout(function () {
+                  clearTimeout(timer)
+                  wx.navigateBack({
+                    delta: 1,
+                    fail: function () {
+                      wx.switchTab({
+                        url: '/pages/index/index'
+                      })
+                    }
+                  })
+                }, 1500)
+              }
             })
           }
-        })
-      } else if (res.data.newUser === 2) {
-        wx.showToast({
-          title: '已经登录',
-          complete: function () {
-            let timer = setTimeout(function () {
-              clearTimeout(timer)
-              wx.navigateBack({
-                delta: 1,
-                fail: function () {
-                  wx.switchTab({
-                    url: '/pages/index/index'
-                  })
-                }
-              })
-            }, 1500)
-          }
-        })
-      }
+        }
+      })
     }).catch(err => {
       util.hideLoading()
     })
@@ -109,25 +114,25 @@ Page({
             },
           }).then(res => {
             util.hideLoading();
-            // if (res.data.code === 200) {
-
-            // }
-            wx.showToast({
-              title: '登录成功',
-              complete: function () {
-                let timer = setTimeout(function () {
-                  clearTimeout(timer)
-                  wx.navigateBack({
-                    delta: 1,
-                    fail: function () {
-                      wx.switchTab({
-                        url: '/pages/index/index'
-                      })
-                    }
-                  })
-                }, 1500)
-              }
-            })
+            if (res.code === 200) {
+              wx.setStorageSync('userId', res.data.userId);
+              wx.showToast({
+                title: '登录成功',
+                complete: function () {
+                  let timer = setTimeout(function () {
+                    clearTimeout(timer)
+                    wx.navigateBack({
+                      delta: 1,
+                      fail: function () {
+                        wx.switchTab({
+                          url: '/pages/index/index'
+                        })
+                      }
+                    })
+                  }, 1500)
+                }
+              })
+            }
           }).catch(() => {
             util.hideLoading()
           })

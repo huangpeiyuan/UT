@@ -6,7 +6,7 @@
 			<view class="swiper">
 				<swiper class="banners" indicator-dots indicator-color="ivory" indicator-active-color="#FBE5BA" autoplay interval="2000" circular>
 					<block>
-						<swiper-item wx:for="{{rotationList}}" wx:key="id">
+						<swiper-item wx:for="{{rotationList}}" wx:key="id" data-href_type="{{item.href_type}}" data-href_id="{{item.href_id}}" bindtap="jump">
 							<image class="swiper-item" src="{{item.image}}" style="height:100%;width:100%">
 							</image>
 						</swiper-item>
@@ -20,25 +20,25 @@
 						<image src="../../images/index-nav1-icon-1.png" />
 						<view class="index-nav_text">品牌介绍</view>
 					</navigator>
-					<navigator url="/pages/brands/index" hover-class="none" class="flex1">
+					<navigator url="/pages/source-material/source-material"	open-type="switchTab" hover-class="none" class="flex1">
 						<image src="../../images/index-nav1-icon-2.png" />
 						<view class="index-nav_text">发圈素材</view>
 					</navigator>
-					<navigator url="/pages/lives/index" hover-class="none" class="flex1">
+					<navigator url="/pages/university/university" open-type="switchTab" hover-class="none" class="flex1">
 						<image src="../../images/index-nav1-icon-3.png" />
 						<view class="index-nav_text">行动力大学</view>
 					</navigator>
 				</view>
 				<view class="v-center" style="margin-top:40rpx;">
-					<navigator url="/pages/all/index" hover-class="none" class="flex1">
+					<navigator url="/pages/media/media"	open-type="switchTab" hover-class="none" class="flex1">
 						<image src="../../images/index-nav1-icon-4.png" />
 						<view class="index-nav_text">5G新媒体</view>
 					</navigator>
-					<navigator url="/pages/brands/index" hover-class="none" class="flex1">
+					<navigator url="/pages/out/out" hover-class="none" class="flex1">
 						<image src="../../images/index-nav1-icon-5.png" />
 						<view class="index-nav_text">下单中心</view>
 					</navigator>
-					<navigator url="/pages/lives/index" hover-class="none" class="flex1">
+					<navigator url="/pages/core/core" hover-class="none" class="flex1">
 						<image src="../../images/index-nav1-icon-6.png" />
 						<view class="index-nav_text">检测报告</view>
 					</navigator>
@@ -50,12 +50,12 @@
 				<view>课程介绍<text>共{{curriculumNum}}节</text></view>
 			</view>
 			<view class="classroom_container mt_16" wx:for="{{bannerList}}" wx:key="id">
-				<view class="classroom_header">
+				<view class="classroom_header" data-href_type="{{item.href_type}}" data-href_id="{{item.href_id}}" bindtap="jumpBanner">
 					<image src="{{item.image}}"></image>
 				</view>
 				<view class="classroom_content v-center mt_16">
 					<view class="classroom_img" wx:for="{{item.curriculumData}}" wx:key="id">
-						<image src="{{item.image}}"></image>
+						<image src="{{item.image}}" data-id="{{item.id}}" bindtap="jumpClass"></image>
 						<view class="classroom_text2">{{item.title}}</view>
 						<view class="classroom_text3">{{item.see_num}}人看过</view>
 					</view>
