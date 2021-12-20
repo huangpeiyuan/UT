@@ -36,7 +36,6 @@ Page({
       this.setData({
         testingList: res.data.testingData
       })
-      console.log(this.data.testingList);
     }).catch(err => {
       util.hideLoading()
     })
@@ -45,7 +44,6 @@ Page({
   // 跳转详情页
   goTesting(e) {
     let id = e.currentTarget.dataset.id
-    console.log(id);
     wx.navigateTo({
       url: `/pages/core-details/core-details?id=${id}`,
     })
@@ -55,7 +53,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+      
   },
 
   /**

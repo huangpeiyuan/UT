@@ -85,7 +85,7 @@ Page({
       catId
     } = _this.data
     _this.data.loading = true
-    util.showLoading()
+    // util.showLoading()
     let data = {};
     if (this.data.href_id === undefined && this.data.searchContent === "") {
       data = {
@@ -107,7 +107,7 @@ Page({
     api.MaterialIndex({
       data: data
     }).then(res => {
-      util.hideLoading()
+      // util.hideLoading()
       if (this.data.href_id !== undefined) {
         _this.setData({
           loading: false,
@@ -311,6 +311,7 @@ Page({
     let id = e.currentTarget.dataset.id
     let arr = this.data.lists.filter(item => {
       if (item.id == id) {
+        console.log(item);
         return item;
       }
     });

@@ -5,6 +5,6 @@
     <view class="core_details_time">{{testingList.created_at}}</view>
   </view>
   <view class="core_details_img" wx:for="{{testingList.image}}">
-    <image src="{{item}}"></image>
+    <image src="{{item}}" data-src="{{item}}" bindtap="preview"></image>
   </view>
 </view>

@@ -7,8 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    testingId: "",
-    testingList: "",
+    testingId: "", 
+    testingList: "",  
   },
 
   /**
@@ -42,11 +42,19 @@ Page({
       }
     }).then(res => {
       this.setData({
-        testingList: res.data.testingData
+        testingList: res.data.testingData,
       })
-      console.log(this.data.testingList);
     }).catch(err => {
       util.hideLoading()
+    })
+  },
+
+  // 图片预览
+  preview(e) {
+    let currentUrl = e.currentTarget.dataset.src
+    wx.previewImage({
+      current: currentUrl, // 当前显示图片的http链接
+      urls: this.data.testingList.image // 需要预览的图片http链接列表
     })
   },
 

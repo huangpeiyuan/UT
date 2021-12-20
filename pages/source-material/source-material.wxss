@@ -109,6 +109,7 @@
   height: 120rpx;
   margin-right: 24rpx;
   flex-wrap: wrap;
+  margin-top: 10rpx;
 }
 
 .material_footer {

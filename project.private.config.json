@@ -311,6 +311,24 @@
           "pathName": "pages/media/media",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/core-details/core-details",
+          "pathName": "pages/core-details/core-details",
+          "query": "id=8",
+          "scene": null
+        },
+        {
+          "name": "pages/core/core",
+          "pathName": "pages/core/core",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/out/out",
+          "pathName": "pages/out/out",
+          "query": "",
+          "scene": null
         }
       ]
     }
